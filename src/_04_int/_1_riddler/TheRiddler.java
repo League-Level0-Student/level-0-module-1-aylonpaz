@@ -26,7 +26,7 @@ public class TheRiddler {
 		// 5. Otherwise, say "wrong" and tell them the answer
 		String question2 = JOptionPane.showInputDialog("I have a bed but never sleep, a mouth but never speak, I run but "
 				+"never walk, I have a bank but no money. What am I?");
-		if(question2.equalsIgnoreCase("a river")) {
+		if(question2.toLowerCase().contains("river")) {
 			score +=1;
 			JOptionPane.showMessageDialog(null, "Correct! Your score is " +score +"!");
 		}else {
