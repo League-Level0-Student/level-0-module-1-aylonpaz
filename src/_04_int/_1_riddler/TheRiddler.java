@@ -18,9 +18,7 @@ public class TheRiddler {
 				score +=1;
 			JOptionPane.showMessageDialog(null, "Correct! your score is " + score + "!");
 		}else {
-			if(score >0) {
-				score -=1;
-			}
+			
 			JOptionPane.showMessageDialog(null, "Wrong! Your score's still 0!");
 		}
 		// 5. Otherwise, say "wrong" and tell them the answer
@@ -30,9 +28,7 @@ public class TheRiddler {
 			score +=1;
 			JOptionPane.showMessageDialog(null, "Correct! Your score is " +score +"!");
 		}else {
-			if(score >0) {
-				score -=1;
-			}
+			
 			JOptionPane.showMessageDialog(null, "Surely you must be an alien, HOW ON EARTH"
 					+ "(Or some other planet) DID YOU NOT KNOW THAT! YOUR SCORE IS "+score+"!");
 		}
@@ -41,15 +37,32 @@ public class TheRiddler {
 				score +=1;
 				JOptionPane.showMessageDialog(null, "Correct Mi Amor! Your score is "+score+"!");
 			}else {
-				if(score >0) {
-					score-=1;
-				}
+				
 				JOptionPane.showMessageDialog(null, "I acually don't blame you for once."
 						+ " That riddles super hard. SIKE!. I DONT CARE HOW HARD IT IS IM STILL BLAMING YOU IDIOT. "
-						+ "GO GET YOUR MONEY UP NOT YOUR FUNNY UP");
+						+ "GO GET YOUR MONEY UP NOT YOUR FUNNY UP"+"Somehow, your score is "+score+". ARE YOU STUPID?!");
+			}
+			String imNotDoneWithU = JOptionPane.showInputDialog("What occurs once in a minute, twice in a moment, but never in 1,000,000 years?");
+			if(imNotDoneWithU.contains("m")) {
+				JOptionPane.showMessageDialog(null, 
+						  "Alright, I've been nice to you, the player doing well for this whole time, and INSAINLY rude to \n"
+						+ "the stupid player. Lets flip the script. \n\nYOU THINK YOUR BETTER THAN EVERYONE. YOU ARE ADOPETED \n"
+						+ "BECAUSE YOUR PARENTS LEFT YOU BECAUSE YOU WeRe A SMART ALEC. YOU ARE A MIGIT, GO DIE IN A WHOLE. \nWISE GUY YOUR SCORE IS "+score);
+			}else {
+				
+				JOptionPane.showMessageDialog(null, "I just finished screaming at the the smart player (As in not you cuz u stupid) and I don't have energy left. C"
+						+ "onsider yourself blessed.");
 			}
 		// 6. Add some more riddles
-
+			if(score>=3) {
+				JOptionPane.showMessageDialog(null, "YOU SMARTALEC! YOUR SCORE IS "+score);
+			}
+			else if(score==2) {
+				JOptionPane.showMessageDialog(null, "Your acutally normal. Your score is 2.");
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "YOUR ACTUALLY STUPID. >:( YOU GOT "+score+" RIGHT. IM ACTUALLY AT A LOSS FOR WORDS");
+			}
 		// 2. Make a pop up to show the score.
 		
 	}

@@ -34,15 +34,27 @@ public class RobotInSpace extends KeyboardAdapter {
 		// each arrow key
 		
 		// 3. If the up arrow is pressed, move the Robot up the screen.
-		
+		if(keyPressed==38) {
+			rob.setAngle(0);
+			rob.move(5);
+		}
 		// 4. If the down arrow is pressed, move the Robot down.
-		
+		if(keyPressed==40) {
+			rob.setAngle(180);
+			rob.move(5);
+		}
 		// 5. If the left arrow is pressed, make the Robot go left.
-		
+		if(keyPressed==37) {
+			rob.setAngle(270);
+			rob.move(5);
+		}
 		// 6. If right is pressed, move the Robot right.
-		
+		if(keyPressed==39) {
+			rob.setAngle(90);
+			rob.move(5);
+		}
 		// 7. Run your program and move the Robot to R2-D2 for a surprise!
-		
+
 	}
 
 	private void checkIfR2D2Found() {
@@ -67,7 +79,7 @@ public class RobotInSpace extends KeyboardAdapter {
 	@Override
 	public void run() {
 		while (!Thread.currentThread().isInterrupted()) {
-			
+
 			if (movingForward && !movingBackward) {
 				moveRobot(KeyEvent.VK_UP);
 			} else if (movingBackward && !movingForward) {
@@ -82,7 +94,7 @@ public class RobotInSpace extends KeyboardAdapter {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		
+
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_UP:
 			movingForward = true;
